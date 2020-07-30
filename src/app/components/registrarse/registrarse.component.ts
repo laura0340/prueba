@@ -30,7 +30,7 @@ export class RegistrarseComponent implements OnInit {
         res => {
           console.log(res);
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/infoUsuario']);
+          this.router.navigate(['/ingresar']);
           },
         err => console.log(err)
       ); // respuesta que me va a dar el servidor

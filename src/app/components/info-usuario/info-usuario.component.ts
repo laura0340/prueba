@@ -8,7 +8,7 @@ import { InfoUsuarioService } from '../../services/info-usuario.service';
 })
 export class InfoUsuarioComponent implements OnInit {
 
-  user = [];
+  user:any = [];
 
   constructor(private infoUsuarioService: InfoUsuarioService) { }
 
@@ -16,8 +16,9 @@ export class InfoUsuarioComponent implements OnInit {
     this.infoUsuarioService.getInfo()
     .subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         this.user = res;
+        console.log(this.user);
       },
       err => console.log(err)
     );
